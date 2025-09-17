@@ -1,0 +1,51 @@
+/* Base styles to ensure full height */
+html, body, #root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* App container */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  background: #1f1f1f;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+  z-index: 1000;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  position: relative;
+  min-height: 0; /* Important for nested flex */
+}
+
+/* Map container */
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f0f0f0;
+}
+
+/* Ensure Leaflet container fills space */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
